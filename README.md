@@ -9,6 +9,7 @@
 
 ## 2. Even or odd
 ####  What is the Big O of the following algorithm? Explain your answer
+```javascript
 function isEven(value) {
     if (value % 2 == 0) {
         return true;
@@ -17,6 +18,7 @@ function isEven(value) {
         return false;
     }
 }
+```
 
 **   This would be O(1) because reqgardless of the input, the function has a constant run time as its not dependent on the inupt. **
 
