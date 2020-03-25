@@ -3,9 +3,10 @@
 ## 1. What is the Big O for this?
 
 #### 1) Determine the Big O for the following algorithm: You are sitting in a room with 15 people. You want to find a playmate for your dog, preferably of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You stand up and yell out, who here has a golden retriever and would like to be a playdate for my golden. Someone yells - "I do, be happy to bring him over"
-**This would be O(1) because regardless of the size of the room, it's a constant response time.**
+-     **This would be O(1) because regardless of the size of the room, it's a constant response time.**
+
 #### 2) Determine the Big O for the following algorithm: You are sitting in a room with 15 people. You want to find a playmate for your dog who is of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You start with the first person and ask him if he has a golden retriever. He says no, then you ask the next person, and the next, and the next until you find someone who has a golden or there is no one else to ask.
-**   This would be O(n) because the time that it takes to complete the task is dependant on the size of the inputs, its linear. **
+-     **This would be O(n) because the time that it takes to complete the task is dependant on the size of the inputs, its linear.**
 
 ## 2. Even or odd
 ####  What is the Big O of the following algorithm? Explain your answer
@@ -20,10 +21,11 @@ function isEven(value) {
 }
 ```
 
-**   This would be O(1) because reqgardless of the input, the function has a constant run time as its not dependent on the inupt. **
+-     **This would be O(1) because reqgardless of the input, the function has a constant run time as its not dependent on the inupt.**
 
 ## Are you here?
 #### What is the Big O of the following algorithm? Explain your answer
+```javascript
 function areYouHere(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         const el1 = arr1[i];
@@ -34,23 +36,25 @@ function areYouHere(arr1, arr2) {
     }
     return false;
 }
+```
 
-**    This would be O(n^k) because of the two for loops, it is polynomial time. For loop is a constant time, a nested for loop is
-      raising that time to another constant unkown power. **
+-     **This would be O(n^k) because of the two for loops, it is polynomial time. For loop is a constant time, a nested for loop is          raising that time to another constant unkown power.**
 
 ## 4. Doubler
 ####  What is the Big O of the following algorithm? Explain your answer
+```javascript
 function doubleArrayValues(array) {
     for (let i = 0; i < array.length; i++) {
         array[i] *= 2;
     }
     return array;
 }
-
-**     This would be O(n) because the for loop is a constant time that is linear to the input. **
+```
+-     **This would be O(n) because the for loop is a constant time that is linear to the input. **
 
 ## 5. Naive search
 ####  What is the Big O of the following algorithm? Explain your answer
+```javascript
 function naiveSearch(array, item) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === item) {
@@ -58,11 +62,13 @@ function naiveSearch(array, item) {
         }
     }
 } 
+```
 
-**     This would be O(n) because the for loop is a constant time that is linear to the input. **
+-     **This would be O(n) because the for loop is a constant time that is linear to the input. **
 
 ## 6. Creating pairs:
 ####  What is the Big O of the following algorithm? Explain your answer
+```javascript
 function createPairs(arr) {
     for (let i = 0; i < arr.length; i++) {
         for(let j = i + 1; j < arr.length; j++) {
@@ -70,12 +76,14 @@ function createPairs(arr) {
         }
     }
 }
+```
 
-**    This would be O(n^k) because of the two for loops, it is polynomial time. For loop is a constant time dependent upon the input.
-      A nested for loop is raising that first constant time to another constant unkown power determined by the input. **
+-     **This would be O(n^k) because of the two for loops, it is polynomial time. For loop is a constant time dependent upon the input.
+     **A nested for loop is raising that first constant time to another constant unkown power determined by the input.**
 
 ## 7. Compute the sequence
 ####  What does the following algorithm do? What is its runtime complexity? Explain your answer
+```javascript
 function compute(num) {
     let result = [];
     for (let i = 1; i <= num; i++) {
@@ -92,12 +100,14 @@ function compute(num) {
     }
     return result;
 }
+```
 
-**     This would be O(n) because the for loop is a constant time that is linear to the input. **
+-     **This would be O(n) because the for loop is a constant time that is linear to the input. **
 
 ## 8. An efficient search
 ####  In this example, we return to the problem of searching using a more sophisticated approach than in naive search, 
 ####  above. Assume that the input array is always sorted. What is the Big O of the following algorithm? Explain your answer
+```javascript
 function efficientSearch(array, item) {
     let minIndex = 0;
     let maxIndex = array.length - 1;
@@ -120,20 +130,24 @@ function efficientSearch(array, item) {
     }
     return -1;
 }
+```
 
-**     This would be O(log(n)) because it's cutting the problem into half each iteration. **
+-     **This would be O(log(n)) because it's cutting the problem into half each iteration. **
 
 ## 9. Random element
 ####  What is the Big O of the following algorithm? Explain your answer
+```javascript
 function findRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
+```
 
-**     This would be O(1) because regardless of the size of the array the function has a constant execution time since it always
-     accessing a single variable from the array. **
+-     **This would be O(1) because regardless of the size of the array the function has a constant execution time since it always
+      **accessing a single variable from the array. **
 
 ## 10. What Am I?
-####  What does the following algorithm do? What is the Big O of the following algorithm? Explain your answer
+####  What does the following algorithm do? What is the Big O of the following algorithm? Explain your answer.
+```javascript
 function isWhat(n) {
     if (n < 2 || n % 1 != 0) {
         return false;
@@ -143,8 +157,8 @@ function isWhat(n) {
     }
     return true;
 }
-
-**     This would be O(n) because the for loop is a constant time that is linear to the input. **
+```
+-     **This would be O(n) because the for loop is a constant time that is linear to the input. **
 
 ## 11. Tower of Hanoi
 ####  The Tower of Hanoi is a very famous mathematical puzzle (some call it game!). This is how it goes:
